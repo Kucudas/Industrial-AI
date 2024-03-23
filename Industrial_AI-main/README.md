@@ -1,3 +1,1 @@
-## update test
-
-## update test ver02
+## 산업인공지능학과 프로젝트
