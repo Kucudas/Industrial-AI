@@ -1,0 +1,19 @@
+train: images/train  # 훈련용 이미지 경로
+val: images/val      # 검증용 이미지 경로
+
+kpt_shape: [14, 3]      # 14개의 3D keypoint
+flip_idx: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]  # keypoint 좌우 대칭 인덱스
+
+nc: 1                   # 클래스 수
+names: ['fat_pig']       # 클래스 이름
+
+# 이미지 증강 설정
+augment:
+  flipud: 0.0            # 상하 반전 비활성화
+  fliplr: 0.0            # 좌우 반전 비활성화
+  hsv_h: 0.015           # 색조(Hue) 변동 범위
+  hsv_s: 0.7             # 채도(Saturation) 변동 범위
+  hsv_v: 0.4             # 명도(Value) 변동 범위
+  gaussian_noise: 0.1    # 가우시안 노이즈 추가 (10% 강도)
+  mosaic: 1.0            # 모자이크 증강 활성화 (이미지 합성 기법)
+  mixup: 0.2             # MixUp 증강 적용 (이미지 혼합)
